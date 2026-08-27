@@ -1,0 +1,10 @@
+# 异环资讯链接（按页面从上到下顺序，一行一个）
+# 来源：完美世界《异环》官网 yh.wanmei.com（移动端文章页可打开）
+# 说明：第 1–5 行对应首页「异环」频道五张长方卡片标题跳转
+# 已剔除不可用的 yihuan.163.com
+
+https://yh.wanmei.com/m/news/gamebroad/20260812/263537.html
+https://yh.wanmei.com/m/news/gamenews/20260808/263493.html
+https://yh.wanmei.com/m/news/gamebroad/20260722/263235.html
+https://yh.wanmei.com/m/news/gamebroad/20260701/262944.html
+https://yh.wanmei.com/m/news/gameevent/20260706/263033.html

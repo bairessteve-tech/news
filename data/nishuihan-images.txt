@@ -1,0 +1,9 @@
+# 逆水寒资讯配图（按页面从上到下顺序，一行一个）
+# 格式：官方图 URL | 本地兜底图路径
+# 说明：部分公告页无正文大图，使用官网分享图或同批次更新图兜底
+
+https://n.res.netease.com/pc/gw/20220208120035773/img/share_5c46a426.png | images/nishuihan/04.png
+https://nie.res.netease.com/r/pic/20260813/520a3026-2e72-4c9d-95da-729629046926.jpg | images/nishuihan/02.jpg
+https://nie.res.netease.com/r/pic/20260814/2ada747b-3869-45ef-aad6-0770dbc2c2a4.jpg | images/nishuihan/03.jpg
+https://n.res.netease.com/pc/gw/20220208120035773/img/share_5c46a426.png | images/nishuihan/04.png
+https://nie.res.netease.com/r/pic/20260813/05eee216-5e34-41f9-8a23-84f2d0724ca9.png | images/nishuihan/02.jpg

@@ -1,0 +1,9 @@
+# 异环资讯配图（按页面从上到下顺序，一行一个）
+# 格式：官方图 URL | 本地兜底图路径
+# 说明：页面优先加载官方图，失败时自动切换本地图
+
+https://yh.wanmei.com/resources/jpg/20260812/114398e3a209e1504b04a143fedf51e4eec2.jpg | images/yihuan/01.jpg
+https://yh.wanmei.com/resources/jpg/20260808/114398aec59c52cc494c9460991e63ba93db.jpg | images/yihuan/02.jpg
+https://yh.wanmei.com/resources/jpg/20260722/11430d85065fe9814dd3ac7e56e87a5d007a.jpg | images/yihuan/03.jpg
+https://yh.wanmei.com/resources/jpg/20260701/1143f63fca7abf51468d9c6e740cecd175ae.jpg | images/yihuan/04.jpg
+https://yh.wanmei.com/resources/png/20260706/1143ef1123f13581438b9b7cc7f72897c09b.png | images/yihuan/05.png

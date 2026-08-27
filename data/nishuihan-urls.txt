@@ -1,0 +1,9 @@
+# 逆水寒资讯链接（按页面从上到下顺序，一行一个）
+# 来源：逆水寒官网 n.163.com
+# 说明：第 1–5 行对应首页「逆水寒」频道五张长方卡片标题跳转
+
+https://n.163.com/news/update/20260821/29094_1311883.html
+https://n.163.com/news/update/20260819/29094_1311750.html
+https://n.163.com/news/update/20260814/29094_1311158.html
+https://n.163.com/news/update/20260814/29094_1311075.html
+https://n.163.com/news/update/20260813/29094_1310919.html

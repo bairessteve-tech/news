@@ -1,0 +1,246 @@
+:root {
+  --ink: #141414;
+  --muted: #5c5c5c;
+  --line: #1a1a1a;
+  --paper: #f4f1ea;
+  --card: #fffdf8;
+  --radius-pill: 999px;
+  --accent: #1c6b6b;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Noto Serif SC", "Songti SC", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 720px) 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 28px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.brand-mark {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.18em;
+}
+
+.capsule-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8px 10px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: #fff;
+}
+
+.nav-btn {
+  flex: 1;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+.nav-btn:hover {
+  background: #f0ece3;
+}
+
+.nav-btn.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.nav-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.header-meta {
+  justify-self: end;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.feed {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 28px 24px 64px;
+}
+
+.feed[data-game="yihuan"] {
+  --accent: #1c6b6b;
+}
+
+.feed[data-game="yanyun"] {
+  --accent: #8a2f1d;
+}
+
+.feed[data-game="nishuihan"] {
+  --accent: #1d4a8a;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.news-item {
+  margin: 0;
+}
+
+.news-card {
+  display: block;
+  width: 100%;
+  min-height: 108px;
+  padding: 18px 22px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+}
+
+.news-card:hover {
+  background: #faf7f1;
+}
+
+.news-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.news-tag {
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.news-card h2 {
+  margin: 0 0 6px;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.news-title {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.news-title:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.news-title:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.news-card > p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.news-excerpt {
+  margin: 0;
+}
+
+.news-thumb {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 20, 20, 0.12);
+  background: #ece8de;
+}
+
+.news-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  vertical-align: middle;
+  transition: transform 0.25s ease;
+}
+
+.news-thumb:hover .news-image {
+  transform: scale(1.02);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .header-meta {
+    justify-self: center;
+  }
+}

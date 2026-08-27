@@ -1,0 +1,9 @@
+# 燕云十六声资讯链接（按页面从上到下顺序，一行一个）
+# 来源：燕云十六声官网 www.yysls.cn
+# 说明：第 1–5 行对应首页「燕云十六声」频道五张长方卡片标题跳转
+
+https://www.yysls.cn/news/official/20260822/37780_1311916.html
+https://www.yysls.cn/news/update/20260821/40412_1311869.html
+https://www.yysls.cn/news/official/20260822/37780_1311917.html
+https://www.yysls.cn/news/official/20260822/37780_1311918.html
+https://www.yysls.cn/news/official/20260822/37780_1311919.html

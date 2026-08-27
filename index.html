@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>时讯 · 游戏资讯</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=3" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">时讯</span>
+        <span class="brand-sub">游戏前线</span>
+      </div>
+
+      <nav class="capsule-nav" aria-label="游戏频道">
+        <button
+          type="button"
+          class="nav-btn is-active"
+          data-game="yihuan"
+          aria-pressed="true"
+        >
+          异环
+        </button>
+        <button
+          type="button"
+          class="nav-btn"
+          data-game="yanyun"
+          aria-pressed="false"
+        >
+          燕云十六声
+        </button>
+        <button
+          type="button"
+          class="nav-btn"
+          data-game="nishuihan"
+          aria-pressed="false"
+        >
+          逆水寒
+        </button>
+      </nav>
+
+      <div class="header-meta">
+        <time id="today"></time>
+      </div>
+    </header>
+
+    <main id="feed" class="feed" data-game="yihuan">
+      <section class="news-panel" aria-label="资讯列表">
+        <ul class="news-list"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>时讯 · 游戏前线 · 摘要来自官网，点标题阅读全文</p>
+      <p id="updated">数据更新中…</p>
+    </footer>
+
+    <script src="js/main.js?v=3"></script>
+  </body>
+</html>

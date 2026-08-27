@@ -1,0 +1,8 @@
+# 燕云十六声资讯配图（按页面从上到下顺序，一行一个）
+# 格式：官方图 URL | 本地兜底图路径
+
+https://nie.res.netease.com/r/pic/20260822/895d6053-ef69-42f5-82e2-1cfe5fedf1ab.jpg | images/yanyun/01.jpg
+https://nie.res.netease.com/r/pic/20260821/c99bba1c-d271-4ec0-a076-3ec5ab87b5cf.jpg | images/yanyun/02.jpg
+https://nie.res.netease.com/r/pic/20260822/c044c4f6-e444-4934-86c5-eaeccb417ab3.jpg | images/yanyun/03.jpg
+https://nie.res.netease.com/r/pic/20260822/6681b868-76b5-4624-ba75-bc2853613731.jpg | images/yanyun/04.jpg
+https://nie.res.netease.com/r/pic/20260822/da52cdb9-c6da-417a-a314-af3bcbab569d.jpg | images/yanyun/05.jpg
