@@ -30,6 +30,15 @@ HEADERS = {
     "Accept-Language": "zh-CN,zh;q=0.9",
 }
 
+MOBILE_HEADERS = {
+    **HEADERS,
+    "User-Agent": (
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
+        "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 "
+        "Mobile/15E148 Safari/604.1"
+    ),
+}
+
 SOURCES = {
     "yihuan": {
         "name": "异环",
@@ -61,9 +70,9 @@ def log(message: str) -> None:
         fh.write(line + "\n")
 
 
-def fetch_html(url: str) -> str:
+def fetch_html(url: str, headers: dict | None = None) -> str:
     time.sleep(SLEEP_SECONDS)
-    resp = requests.get(url, headers=HEADERS, timeout=25)
+    resp = requests.get(url, headers=headers or HEADERS, timeout=25)
     resp.raise_for_status()
     resp.encoding = resp.apparent_encoding or "utf-8"
     return resp.text
@@ -123,6 +132,7 @@ def item(
         "title": title,
         "excerpt": clip(collapse(excerpt)),
         "url": url,
+        "urlMobile": "",
         "image": image,
     }
 
@@ -249,6 +259,34 @@ def unique(items: list[dict]) -> list[dict]:
     return result
 
 
+def title_key(title: str) -> str:
+    return collapse(title)
+
+
+def to_yihuan_mobile_url(url: str) -> str:
+    if "yh.wanmei.com" in url and "/m/" not in url:
+        return url.replace("://yh.wanmei.com/", "://yh.wanmei.com/m/", 1)
+    return url
+
+
+def attach_yihuan_mobile_urls(items: list[dict]) -> None:
+    mobile_items: list[dict] = []
+    for list_url in (
+        "https://yh.wanmei.com/m/news/",
+        "https://yh.wanmei.com/m/news/index1.html",
+    ):
+        log(f"读取 异环 手机列表 {list_url}")
+        mobile_items.extend(parse_yihuan(fetch_html(list_url, MOBILE_HEADERS), "https://yh.wanmei.com"))
+        mobile_items = unique(mobile_items)
+        if len(mobile_items) >= LIMIT:
+            break
+    by_title = {title_key(entry["title"]): entry["url"] for entry in mobile_items}
+    for entry in items:
+        mobile_url = by_title.get(title_key(entry["title"]), "")
+        if mobile_url:
+            entry["urlMobile"] = to_yihuan_mobile_url(mobile_url)
+
+
 def collect_game(game_id: str) -> list[dict]:
     meta = SOURCES[game_id]
     parser = PARSERS[game_id]
@@ -260,6 +298,8 @@ def collect_game(game_id: str) -> list[dict]:
         if len(collected) >= LIMIT:
             break
     collected = collected[:LIMIT]
+    if game_id == "yihuan":
+        attach_yihuan_mobile_urls(collected)
     for entry in collected:
         if not entry.get("image"):
             entry["image"] = fetch_article_image(entry["url"])

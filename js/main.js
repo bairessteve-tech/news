@@ -69,6 +69,10 @@ function handleImageError(img) {
 
 window.handleImageError = handleImageError;
 
+function articleUrl(item) {
+  return item.urlMobile || item.url || "#";
+}
+
 function render(gameId, items = [], localImages = []) {
   feed.dataset.game = gameId;
 
@@ -86,7 +90,7 @@ function render(gameId, items = [], localImages = []) {
 
   list.innerHTML = items
     .map((item, index) => {
-      const href = item.url || "#";
+      const href = articleUrl(item);
       const src = localImages[index] || "";
       const imageHtml = src
         ? `
