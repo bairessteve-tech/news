@@ -161,10 +161,10 @@ loadNews()
     if (updated) {
       updated.textContent = `数据更新于 ${formatUpdatedAt(data.updatedAt)}`;
     }
-    showGame("yihuan");
+    showGame("nishuihan");
   })
   .catch((err) => {
     console.error(err);
     if (updated) updated.textContent = "数据尚未生成";
-    showGame("yihuan");
+    showGame("nishuihan");
   });
